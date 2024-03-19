@@ -1,0 +1,18 @@
+﻿<Window x:Class="SQLClientExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SQLClientExample"
+        mc:Ignorable="d"
+        Title="MainWindow" FontSize="20" FontFamily="Consolas" Height="600" Width="800">
+    <Grid>
+        <Label Content="Query:" HorizontalAlignment="Left" Margin="50,19,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="queryTextBox" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="50,70,0,0" VerticalAlignment="Top" Width="700" Height="100"/>
+        <Label Content="Query result:" HorizontalAlignment="Left" Margin="50,167,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="resultTextBox" Visibility="Hidden" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="50,222,40,130" VerticalAlignment="Top" Width="700" Height="100"/>
+        <Button x:Name="executeButton" Content="Execute" HorizontalAlignment="Left" Margin="50,454,0,0" VerticalAlignment="Top" Height="55" Width="218" Click="executeButton_Click" />
+        <Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="532,454,0,0" VerticalAlignment="Top" Height="55" Width="218" Click="exitButton_Click"/>
+        <DataGrid  x:Name="dataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="50,222,40,130"/>        
+    </Grid>
+</Window>
